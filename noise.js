@@ -1,35 +1,24 @@
+var playNote = function(note){
+  // var note = $('#' + event.key + 'Audio')[0];
+  note.load();
+  note.play();
+};
 
 $(document).ready( function() {
   //for clicking
   $('.note').on("click",function() {
-    // if (event.key == 'e' || event.which == 32) {
-    // audioNotes();
     var sound = $(this).html();
-    var notes = $('#' + sound + 'Audio')[0];
-    notes.play();
+    var note = $('#' + sound + 'Audio')[0];
+    // notes.load();
+    // notes.play();
+    playNote(note);
   });
 
-  // var playNote = function(event) {
-  //   var sound = $(this).html();
-  //   alert(sound);
-  //   var note = $('#' + sound + 'Audio')[0];
-  //   // var note = $('#cAudio')[0];
-  //   return note.play();
-  // };
-
+//for keyboard functionality
   $('body').keydown(function(event) {
     var noise = $('#' + event.key + 'Audio')[0];
-    noise.play();
-        // alert(event.key);
+    // noise.load();
+    // noise.play();
+    playNote(noise);
   });
   });
-
-
-      // if (event.key == 'e'|| event.key == 'a'|| event.key == 'b'|| event.which == 13)
-  // $('.note').on("click",function() {
-  //   var sound = $(this).html();
-  //   var notes = $('#' + sound + 'Audio')[0];
-  //     notes.play();
-  //
-  //   if
-  // });
