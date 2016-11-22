@@ -1,5 +1,5 @@
 var playNote = function(note){
-  // var note = $('#' + event.key + 'Audio')[0];
+
   note.load();
   note.play();
 };
